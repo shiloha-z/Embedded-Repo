@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "datadeal_api.h": "c",
+        "freeze_api.h": "c",
+        "event_api.h": "c",
+        "savemem_api.h": "c"
+    }
+}

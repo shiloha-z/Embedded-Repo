@@ -1,0 +1,17 @@
+"D:\IAR7_4\arm\bin\armproc.dll" 
+
+"D:\IAR7_4\arm\bin\armjlink.dll" 
+
+"E:\ItemWork\SchoolMeter_RT\调试程序\NILM_GD470_BOOT_JD_20230307_1503_Debug_调试\IAR\FLASH\Exe\NILM_BOOT.out" 
+
+--plugin "D:\IAR7_4\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR7_4\arm\config\debugger\GD\GD32F4xx.dmac" 
+
+--macro "C:\ProgramC:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\flashloader\GD\FlashGD32F450xI.mac" 
+
+--flash_loader "E:\ItemWork\SchoolMeter_RT\调试程序\NILM_GD470_BOOT_JD_20230307_1503_Debug_调试\IAR\OS2wxy.board" 
+
+
+
+

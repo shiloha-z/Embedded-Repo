@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"sdmmc_host.h": "c",
+			"sdmmc_cmd.h": "c",
+			"esp_err.h": "c",
+			"gatts_table_creat_demo.h": "c",
+			"freertos.h": "c",
+			"task.h": "c"
+		}
+	}
+}

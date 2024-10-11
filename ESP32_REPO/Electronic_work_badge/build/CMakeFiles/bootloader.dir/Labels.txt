@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/CMakeFiles/bootloader
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/CMakeFiles/bootloader.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/CMakeFiles/bootloader-complete.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/Repo/Embedded-Repo/ESP32_REPO/Electronic_work_badge/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,0 +1,15 @@
+"D:\App_Files\arm\bin\armproc.dll" 
+
+"D:\App_Files\arm\bin\armjlink.dll" 
+
+"D:\Repo\Embedded-Repo\IAR_REPO\Power_decomposition_of_electric_meter\NILM_GD470_JD_RT-Thread_20231109_0837_Debug\module\bsp\gd32450z-eval\build\Exe\GD32F450Z_EVAL.out" 
+
+--plugin "D:\App_Files\arm\bin\armbat.dll" 
+
+--device_macro "D:\App_Files\arm\config\debugger\GD\GD32F4xx.dmac" 
+
+--flash_loader "D:\Repo\Embedded-Repo\IAR_REPO\Power_decomposition_of_electric_meter\NILM_GD470_JD_RT-Thread_20231109_0837_Debug\module\bsp\gd32450z-eval\project.board" 
+
+
+
+

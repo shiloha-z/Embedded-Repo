@@ -1,0 +1,12 @@
+Expression	Value	Location	Type	
+finalresult	1.48035376E+3	0x20041BF4	float	
+std_world	2.2801053524017334	0x20041BA8	double	
+mean_world	1.48051953125E+3	0x20041BB0	double	
+finalresult2	Error (col 1): Unknown or ambiguous symbol. finalresult2			
+pad	Error (col 1): Unknown or ambiguous symbol. pad			
+covo	Error (col 1): Unknown or ambiguous symbol. covo			
+GRU_tem	Error (col 1): Unknown or ambiguous symbol. GRU_tem			
+full_1	<array>	0x20041824	float[20]	
+full_2	<array>	0x20041988	float[10]	
+powerdata_guiyihua	<array>	0x20008388	float[70]	
+final	-7.27000311E-2	0x20041BF0	float	
