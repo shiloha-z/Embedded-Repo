@@ -1,0 +1,11 @@
+CMake Error at C:/espressif/v5.2.1/esp-idf/tools/cmake/build.cmake:544 (message):
+  WARNING: Component "espressif/cmd_led_indicator" not found
+
+  ERROR: Because project depends on espressif/cmd_led_indicator (*) which
+  doesn't match any versions, version solving failed.
+
+Call Stack (most recent call first):
+  C:/espressif/v5.2.1/esp-idf/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+
