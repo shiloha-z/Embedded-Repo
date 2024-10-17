@@ -1,0 +1,151 @@
+#include "mb.h"
+#include "mbport.h"
+ 
+ 
+// ???????
+#define REG_INPUT_SIZE  10
+uint16_t REG_INPUT_BUF[REG_INPUT_SIZE];
+ 
+ 
+// ???????
+#define REG_HOLD_SIZE   10
+uint16_t REG_HOLD_BUF[REG_HOLD_SIZE];
+ 
+ 
+// ????
+#define REG_COILS_SIZE 10
+uint8_t REG_COILS_BUF[REG_COILS_SIZE] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 1};
+ 
+ 
+// ?????
+#define REG_DISC_SIZE  10
+uint8_t REG_DISC_BUF[REG_DISC_SIZE] = {1,1,1,1,0,0,0,0,1,1};
+ 
+ 
+/// CMD4????????
+eMBErrorCode eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
+{
+    USHORT usRegIndex = usAddress - 1;
+ 
+    // ????
+    if((usRegIndex + usNRegs) > REG_INPUT_SIZE)
+    {
+        return MB_ENOREG;
+    }
+ 
+    // ????
+    while( usNRegs > 0 )
+    {
+        *pucRegBuffer++ = ( unsigned char )( REG_INPUT_BUF[usRegIndex] >> 8 );
+        *pucRegBuffer++ = ( unsigned char )( REG_INPUT_BUF[usRegIndex] & 0xFF );
+        usRegIndex++;
+        usNRegs--;
+    }
+ 
+    // ??????????
+    for(usRegIndex = 0; usRegIndex < REG_INPUT_SIZE; usRegIndex++)
+    {
+        REG_INPUT_BUF[usRegIndex]++;
+    }
+ 
+    return MB_ENOERR;
+}
+ 
+// ??????????
+static USHORT usHoldingReg[1]; // ??1?16????????ADC???
+
+// ?? eMBRegHoldingCB ????,?????????
+eMBErrorCode eMBRegHoldingCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode)
+{
+    if (usAddress == 1)  // ??????????1
+    {
+        switch (eMode)
+        {
+        case MB_REG_READ:  // ???????
+            // ? ADC ?????????????,?? Modbus ???
+            pucRegBuffer[0] = (usHoldingReg[0] >> 8) & 0xFF;  // ???
+            pucRegBuffer[1] = usHoldingReg[0] & 0xFF;         // ???
+            break;
+
+        case MB_REG_WRITE:  // ????????????(??)
+            usHoldingReg[0] = (pucRegBuffer[0] << 8) | pucRegBuffer[1];  // ??????
+            break;
+        }
+        return MB_ENOERR;  // ????
+    }
+    return MB_ENOREG;  // ??????
+}
+
+ 
+// ???????????????(?????1???)
+UCHAR ucSwitchStatus = 0;  // 0 ????,1 ????
+
+eMBErrorCode eMBRegCoilsCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNCoils, eMBRegisterMode eMode)
+{
+    USHORT usRegIndex = usAddress - 1;  // Modbus ???1??,??????0??
+    
+    // ????1???????,????????
+    if (usRegIndex != 0 || usNCoils != 1)  // ???????,???1??
+    {
+        return MB_ENOREG;  // ?????????
+    }
+
+    // ?????:??????????
+    if (eMode == MB_REG_WRITE)
+    {
+        // ????????????
+        ucSwitchStatus = (*pucRegBuffer & 0x01);  // ????1???????
+        // ??????????????????,?????????
+    }
+    // ?????:????????????
+    else
+    {
+        *pucRegBuffer = ucSwitchStatus;  // ????????
+    }
+
+    return MB_ENOERR;  // ????
+}
+
+ 
+/// CMD2????????
+eMBErrorCode eMBRegDiscreteCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNDiscrete )
+{
+    USHORT usRegIndex   = usAddress - 1;
+    UCHAR  ucBits       = 0;
+    UCHAR  ucState      = 0;
+    UCHAR  ucLoops      = 0;
+ 
+    // ????
+    if((usRegIndex + usNDiscrete) > REG_DISC_SIZE)
+    {
+        return MB_ENOREG;
+    }
+ 
+    ucLoops = (usNDiscrete - 1) / 8 + 1;
+    while(ucLoops != 0)
+    {
+        ucState = 0;
+        ucBits  = 0;
+        while(usNDiscrete != 0 && ucBits < 8)
+        {
+            if(REG_DISC_BUF[usRegIndex])
+            {
+                ucState |= (1 << ucBits);
+            }
+            usNDiscrete--;
+            usRegIndex++;
+            ucBits++;
+        }
+        *pucRegBuffer++ = ucState;
+        ucLoops--;
+    }
+ 
+    // ??????????
+    for(usRegIndex = 0; usRegIndex < REG_DISC_SIZE; usRegIndex++)
+    {
+        REG_DISC_BUF[usRegIndex] = !REG_DISC_BUF[usRegIndex];
+    }
+ 
+    return MB_ENOERR;
+}
+
