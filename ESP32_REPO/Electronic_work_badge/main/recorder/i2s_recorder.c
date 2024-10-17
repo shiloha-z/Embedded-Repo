@@ -152,7 +152,7 @@ void feed_Task(void *arg)
             ESP_LOGE(TAG, "NO DATA READ FROM MICROPHONE");
             break;
         }
-        ESP_LOGI("RECORDING:", "%d",i2s_buff[0]);//打印日志时任务被删除会导致程序卡死
+        //ESP_LOGI("RECORDING:", "%d",i2s_buff[0]);//打印日志时任务被删除会导致程序卡死
 #ifdef SAVE_ORIGINAL_AUDIO
         fwrite((int16_t*)i2s_buff, audio_chunksize, sizeof(int16_t), file_save_original);
         flash_wr_size2 += audio_chunksize * sizeof(int16_t);
@@ -279,7 +279,7 @@ esp_err_t recorder_init(void)
         return ESP_FAIL;
     }
 
-    rb_debug = rb_create(1 * 4 * CONFIG_EXAMPLE_SAMPLE_RATE * 2, 1);
+    rb_debug = rb_create(1 * 4 * CONFIG_EXAMPLE_SAMPLE_RATE * 4, 1);
     if (rb_debug == NULL) {
         ESP_LOGE(TAG, "rb_debug create error");
         return ESP_FAIL;
@@ -362,6 +362,12 @@ ESP_LOGI(TAG, "recording_end1");
     if(buf_temp!= NULL){free(buf_temp);buf_temp = NULL;}
     i2s_uninstall();
     //if(afe_data != NULL){afe_handle->destroy(afe_data); afe_data = NULL;}
+
+    // //删除信号量
+    // vSemaphoreDelete(pause_semaphore);
+    // vSemaphoreDelete(pause_semaphore2);
+    // vSemaphoreDelete(pause_semaphore3);
+
     return ret;
 }
 

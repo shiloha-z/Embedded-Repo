@@ -187,7 +187,7 @@ void app_main(void)
         STATUS status = RECORDING;
         if (xQueueSend(status_queue, &status, portMAX_DELAY) != pdPASS) 
             ESP_LOGE(TAG, "Failed to send data message to queue");
-        vTaskDelay(10000 / portTICK_PERIOD_MS);
+        vTaskDelay(5000 / portTICK_PERIOD_MS);
 
         status = IDLE;
         if (xQueueSend(status_queue, &status, portMAX_DELAY) != pdPASS) 

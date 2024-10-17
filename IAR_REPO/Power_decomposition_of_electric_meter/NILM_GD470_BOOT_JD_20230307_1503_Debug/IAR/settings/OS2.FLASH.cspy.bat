@@ -25,7 +25,7 @@ if not "%1" == "" goto debugFile
 
 @echo on 
 
-"D:\IAR7_4\common\bin\cspybat" -f "E:\ItemWork\SchoolMeter_RT\调试程序\NILM_GD470_BOOT_JD_20230307_1503_Debug_调试\IAR\settings\OS2.FLASH.general.xcl" --backend -f "E:\ItemWork\SchoolMeter_RT\调试程序\NILM_GD470_BOOT_JD_20230307_1503_Debug_调试\IAR\settings\OS2.FLASH.driver.xcl" 
+"D:\App_Files\common\bin\cspybat" -f "D:\Repo\Embedded-Repo\IAR_REPO\Power_decomposition_of_electric_meter\NILM_GD470_BOOT_JD_20230307_1503_Debug\IAR\settings\OS2.FLASH.general.xcl" --backend -f "D:\Repo\Embedded-Repo\IAR_REPO\Power_decomposition_of_electric_meter\NILM_GD470_BOOT_JD_20230307_1503_Debug\IAR\settings\OS2.FLASH.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\IAR7_4\common\bin\cspybat" -f "E:\ItemWork\SchoolMeter_RT\调试程序\NILM_GD470_BOOT_JD_20230307_1503_Debug_调试\IAR\settings\OS2.FLASH.general.xcl" "--debug_file=%1" --backend -f "E:\ItemWork\SchoolMeter_RT\调试程序\NILM_GD470_BOOT_JD_20230307_1503_Debug_调试\IAR\settings\OS2.FLASH.driver.xcl" 
+"D:\App_Files\common\bin\cspybat" -f "D:\Repo\Embedded-Repo\IAR_REPO\Power_decomposition_of_electric_meter\NILM_GD470_BOOT_JD_20230307_1503_Debug\IAR\settings\OS2.FLASH.general.xcl" "--debug_file=%1" --backend -f "D:\Repo\Embedded-Repo\IAR_REPO\Power_decomposition_of_electric_meter\NILM_GD470_BOOT_JD_20230307_1503_Debug\IAR\settings\OS2.FLASH.driver.xcl" 
 
 @echo off 
 :end

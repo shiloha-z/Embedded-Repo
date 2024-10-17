@@ -1,0 +1,16 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\module\\bsp\\gd32450z-eval\\rtosModule.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\module\\bsp\\gd32450z-eval\\rtosModule.eww": {
+      "configs": {},
+      "selected": {
+        "path": "${workspaceFolder}\\module\\bsp\\gd32450z-eval\\project.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "D:\\App_Bins\\IAR Systems\\Embedded Workbench 9.1"
+  }
+}

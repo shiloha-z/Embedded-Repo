@@ -19096,6 +19096,74 @@ float input_tmp[sizeof(input)];
 
 float input_tmp2[65] = {0};
 
+
+
+
+
+
+
+
+
+ 
+void medfilt(float* data, int length, int kernel_size, float* output) {
+    for (int i = 0; i < length; i++) {
+        int start = (i - kernel_size / 2 < 0) ? 0 : i - kernel_size / 2;
+        int end = (i + kernel_size / 2 >= length) ? length - 1 : i + kernel_size / 2;
+        float window[128];
+        int k = 0;
+
+        
+        for (int j = start; j <= end; j++) {
+            window[k++] = data[j];
+        }
+
+        
+        for (int m = 0; m < k - 1; m++) {
+            for (int n = m + 1; n < k; n++) {
+                if (window[m] > window[n]) {
+                    float temp = window[m];
+                    window[m] = window[n];
+                    window[n] = temp;
+                }
+            }
+        }
+        
+        
+        output[i] = window[k / 2];
+    }
+}
+
+
+
+
+
+
+
+ 
+uint8_t process_appliance_data(float* power_data, int length) {
+    uint8_t power_change_detected = 0x00;
+    int last_detected_position = -10;  
+    
+    float filtered_P_active_values[128];
+
+    
+    medfilt(power_data, length, 5, filtered_P_active_values);
+
+    
+    for (int i = 1; i < length; i++) {
+        float power_difference = fabs(filtered_P_active_values[i] - filtered_P_active_values[i - 1]);
+
+        
+        if (power_difference > 15 && i - last_detected_position >= 10) {
+            power_change_detected = 0x01;
+            printf("Power change detected at position %d.\n", i);
+            last_detected_position = i;  
+        }
+    }
+    return power_change_detected;
+}
+
+
 unsigned char NILM_Task_i = 0;
 
 
@@ -19115,10 +19183,14 @@ void api_NILM_Task(void)
       get_current(smp_p,I_data);		
 
       input_tmp2[NILM_Task_i] = GetActivePower();
-
       NILM_Task_i++;
       if(NILM_Task_i == 65){
         NILM_Task_i = 0;
+        
+        if(process_appliance_data(input_tmp2, 65) == 0x01)
+        {
+            printf("Power change detected.\n");
+        }
         finalresult = LoadResolve_2(input_tmp2, &app_struct);
       }
 

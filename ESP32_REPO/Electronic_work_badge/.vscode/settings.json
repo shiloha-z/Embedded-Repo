@@ -13,7 +13,7 @@
         "ESP_ROM_ELF_DIR": "d:\\ESP_IDF\\espressif\\tools\\esp-rom-elfs\\20230320/"
     },
     "idf.gitPathWin": "d:\\ESP_IDF\\espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
-    "idf.portWin": "COM8",
+    "idf.portWin": "COM5",
     "idf.flashType": "UART",
     "files.associations": {
         "sdmmc_host.h": "c",

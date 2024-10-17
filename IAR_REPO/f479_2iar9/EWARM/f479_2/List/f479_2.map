@@ -1,0 +1,979 @@
+###############################################################################
+#
+# IAR ELF Linker V9.32.1.338/W64 for ARM                  15/Oct/2024  15:32:08
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Exe\f479_2.out
+#    Map file     =
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\List\f479_2.map
+#    Command line =
+#        -f
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Exe\f479_2.out.rsp
+#        (D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\X-CUBE-AI\App\app_x-cube-ai.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\Core\main.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\X-CUBE-AI\App\network.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\X-CUBE-AI\App\network_data.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\X-CUBE-AI\App\network_data_params.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\Middlewares\ST\AI\Lib\NetworkRuntime910_CM4_IAR.a
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\EWARM\startup_stm32f479xx.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_cortex.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_dma.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_dma_ex.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_exti.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_flash.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_flash_ex.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_flash_ramfunc.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_gpio.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\Core\stm32f4xx_hal_msp.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_pwr.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_pwr_ex.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_rcc.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_rcc_ex.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_tim.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver\stm32f4xx_hal_tim_ex.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\Core\stm32f4xx_it.o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\CMSIS\system_stm32f4xx.o
+#        --no_out_extension -o
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Exe\f479_2.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\List\f479_2.map
+#        --config "D:\App_Bins\IAR Systems\Embedded Workbench
+#        9.1\arm/config/linker/GigaDevice/GD32F450xK.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale --cpu=Cortex-M4
+#        --fpu=VFPv4_sp)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__Heap_Handler  = Basic
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x82f'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x1000'0000 to 0x1000'ffff] |
+                [from 0x2000'0000 to 0x2002'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x1b4
+  .intvec            ro code   0x800'0000   0x1b4  startup_stm32f479xx.o [1]
+                             - 0x800'01b4   0x1b4
+
+"P1":                                      0x4ba2
+  .text              ro code   0x800'01b4   0xeca  xprintffull_nomb.o [7]
+  .rodata            const     0x800'107e     0x2  xlocale_c.o [7]
+  .text              ro code   0x800'1080    0x16  strchr.o [9]
+  .rodata            const     0x800'1096     0x1  xlocale_c.o [7]
+  .text              ro code   0x800'1098    0x40  xfail_s.o [7]
+  .text              ro code   0x800'10d8    0x36  strlen.o [9]
+  .text              ro code   0x800'1110    0x58  memchr.o [9]
+  .text              ro code   0x800'1168    0x18  ABImemcpy_small.o [9]
+  .text              ro code   0x800'1180    0x70  frexp.o [8]
+  .text              ro code   0x800'11f0    0x34  DblCmpLe.o [8]
+  .text              ro code   0x800'1224    0x34  DblCmpGe.o [8]
+  .text              ro code   0x800'1258   0x13a  ldexp.o [8]
+  .text              ro code   0x800'1394    0x36  DblToS32.o [8]
+  .text              ro code   0x800'13cc    0x22  S32ToDbl.o [8]
+  .text              ro code   0x800'13f0   0x24e  DblAddSub.o [8]
+  .text              ro code   0x800'1640   0x246  DblDiv.o [8]
+  .text              ro code   0x800'1888    0x22  DblToU32.o [8]
+  .text              ro code   0x800'18ac    0x1c  U32ToDbl.o [8]
+  .text              ro code   0x800'18c8   0x1aa  DblMul.o [8]
+  .text              ro code   0x800'1a74     0x8  xlocale_c.o [7]
+  .text              ro code   0x800'1a7c   0x106  I64DivMod_small.o [9]
+  .text              ro code   0x800'1b82     0x6  abort.o [7]
+  .text              ro code   0x800'1b88     0x2  I64DivZer.o [9]
+  .text              ro code   0x800'1b8c    0x14  exit.o [10]
+  .text              ro code   0x800'1ba0    0x7c  iarttio.o [10]
+  .text              ro code   0x800'1c1c     0x8  XShttio.o [7]
+  .text              ro code   0x800'1c24   0x990  ai_platform_interface.o [6]
+  .text              ro code   0x800'25b4   0x14e  ai_datatypes_format.o [6]
+  .text              ro code   0x800'2704    0x3c  ai_datatypes_internal.o [6]
+  .text              ro code   0x800'2740    0xf4  ai_platform.o [6]
+  .text              ro code   0x800'2834    0x24  core_common.o [6]
+  .text              ro code   0x800'2858    0xe8  layers.o [6]
+  .text              ro code   0x800'2940    0xf4  st_int8_fill.o [6]
+  .text              ro code   0x800'2a34    0x68  memcmp.o [9]
+  .text              ro code   0x800'2a9c   0x7b8  lite_dense_if32.o [6]
+  .text              ro code   0x800'3254   0x344  stm32f4xx_hal_rcc_ex.o [5]
+  .text              ro code   0x800'3598     0xc  stm32f4xx_hal.o [5]
+  .rodata            const     0x800'35c0   0x238  network_data_params.o [3]
+  .text              ro code   0x800'37f8   0x1f8  lz77_init.o [9]
+  .text              ro code   0x800'39f0   0x1c4  app_x-cube-ai.o [3]
+  .text              ro code   0x800'3bb4    0x28  printf.o [7]
+  .text              ro code   0x800'3bdc   0x1c4  network.o [3]
+  .text              ro code   0x800'3da0   0x124  heap0.o [7]
+  .text              ro code   0x800'3ec4    0x20  network_data.o [3]
+  .text              ro code   0x800'3ee4    0x2c  xgetmemchunk.o [7]
+  .text              ro code   0x800'3f10   0x14c  layers_nl_generic_float.o [6]
+  .text              ro code   0x800'405c    0xb8  lite_nl_relu_if32of32.o [6]
+  .text              ro code   0x800'4114   0x138  layers_conv2d_generic_float.o [6]
+  .text              ro code   0x800'424c   0x120  stm32f4xx_hal_rcc.o [5]
+  .text              ro code   0x800'436c    0x60  stm32f4xx_hal_rcc.o [5]
+  .text              ro code   0x800'43cc    0x40  stm32f4xx_hal.o [5]
+  .text              ro code   0x800'440c    0xac  stm32f4xx_hal_cortex.o [5]
+  .text              ro code   0x800'44b8    0xcc  main.o [2]
+  .text              ro code   0x800'4584    0x34  stm32f4xx_hal.o [5]
+  .text              ro code   0x800'45b8    0x14  memset.o [9]
+  .text              ro code   0x800'45cc    0x78  stm32f4xx_hal_pwr_ex.o [5]
+  .text              ro code   0x800'4644    0x38  stm32f4xx_hal_msp.o [2]
+  .text              ro code   0x800'467c    0x66  ABImemset.o [9]
+  .rodata            const     0x800'46e4    0x64  app_x-cube-ai.o [3]
+  .text              ro code   0x800'4748    0x44  putchar.o [7]
+  .text              ro code   0x800'478c    0x10  write.o [10]
+  .text              ro code   0x800'479c    0x1e  dwrite.o [10]
+  .text              ro code   0x800'47ba    0x20  iarwstd.o [10]
+  .text              ro code   0x800'47da    0x22  iarwrite.o [10]
+  .text              ro code   0x800'47fc    0x38  zero_init3.o [9]
+  .text              ro code   0x800'4834    0x28  data_init.o [9]
+  .text              ro code   0x800'485c    0x22  fpinit_M.o [8]
+  .iar.init_table    const     0x800'4880    0x2c  - Linker created -
+  .text              ro code   0x800'48ac    0x20  system_stm32f4xx.o [4]
+  .text              ro code   0x800'48cc    0x1e  cmain.o [9]
+  .text              ro code   0x800'48ea     0x4  low_level_init.o [7]
+  .text              ro code   0x800'48ee     0x4  exit.o [7]
+  .text              ro code   0x800'48f4     0xa  cexit.o [9]
+  .text              ro code   0x800'4900    0x1c  cstartup_M.o [9]
+  .text              ro code   0x800'491c    0x16  xprout.o [7]
+  .text              ro code   0x800'4932    0x14  stm32f4xx_it.o [2]
+  .text              ro code   0x800'4948    0x10  stm32f4xx_hal.o [5]
+  .text              ro code   0x800'4958    0x10  startup_stm32f479xx.o [1]
+  .rodata            const     0x800'4968     0x8  network.o [3]
+  .rodata            const     0x800'4970     0x8  network.o [3]
+  .rodata            const     0x800'4978     0x8  network.o [3]
+  .rodata            const     0x800'4980     0x8  network.o [3]
+  .rodata            const     0x800'4988     0x8  network.o [3]
+  .text              ro code   0x800'4990     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4994     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4998     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'499c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49a0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49a4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49a8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49ac     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49b0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49b4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49b8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49bc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49c0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49c4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49c8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49cc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49d0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49d4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49d8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49dc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49e0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49e4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49e8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49ec     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49f0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49f4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49f8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'49fc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a00     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a04     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a08     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a0c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a10     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a14     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a18     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a1c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a20     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a24     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a28     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a2c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a30     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a34     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a38     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a3c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a40     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a44     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a48     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a4c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a50     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a54     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a58     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a5c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a60     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a64     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a68     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a6c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a70     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a74     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a78     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a7c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a80     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a84     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a88     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a8c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a90     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a94     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a98     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4a9c     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4aa0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4aa4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4aa8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4aac     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ab0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ab4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ab8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4abc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ac0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ac4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ac8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4acc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ad0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ad4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ad8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4adc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ae0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ae4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4ae8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4aec     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4af0     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4af4     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4af8     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4afc     0x4  startup_stm32f479xx.o [1]
+  .text              ro code   0x800'4b00     0x4  startup_stm32f479xx.o [1]
+  .rodata            const     0x800'4b04     0x0  zero_init3.o [9]
+  .rodata            const     0x800'4b04     0x0  lz77_init.o [9]
+  Initializer bytes  const     0x800'4b04   0x252  <for P2 s0>
+                             - 0x800'4d56  0x4ba2
+
+"P2", part 1 of 3:                          0x744
+  P2 s0                       0x1000'0000   0x744  <Init block>
+    .data            inited   0x1000'0000    0xc8  network.o [3]
+    .data            inited   0x1000'00c8    0x4c  network.o [3]
+    .data            inited   0x1000'0114    0x48  xfiles.o [7]
+    .data            inited   0x1000'015c    0x38  xlocale_c.o [7]
+    .data            inited   0x1000'0194    0x30  network.o [3]
+    .data            inited   0x1000'01c4    0x30  network.o [3]
+    .data            inited   0x1000'01f4    0x30  network.o [3]
+    .data            inited   0x1000'0224    0x30  network.o [3]
+    .data            inited   0x1000'0254    0x30  network.o [3]
+    .data            inited   0x1000'0284    0x20  network.o [3]
+    .data            inited   0x1000'02a4    0x20  network.o [3]
+    .data            inited   0x1000'02c4    0x1c  app_x-cube-ai.o [3]
+    .data            inited   0x1000'02e0    0x1c  network.o [3]
+    .data            inited   0x1000'02fc    0x1c  network.o [3]
+    .data            inited   0x1000'0318    0x1c  network.o [3]
+    .data            inited   0x1000'0334    0x1c  network.o [3]
+    .data            inited   0x1000'0350    0x1c  network.o [3]
+    .data            inited   0x1000'036c    0x1c  network.o [3]
+    .data            inited   0x1000'0388    0x1c  network.o [3]
+    .data            inited   0x1000'03a4    0x1c  network.o [3]
+    .data            inited   0x1000'03c0    0x1c  network.o [3]
+    .data            inited   0x1000'03dc    0x1c  network.o [3]
+    .data            inited   0x1000'03f8    0x1c  network.o [3]
+    .data            inited   0x1000'0414    0x1c  network.o [3]
+    .data            inited   0x1000'0430    0x1c  network.o [3]
+    .data            inited   0x1000'044c    0x1c  network.o [3]
+    .data            inited   0x1000'0468    0x1c  network.o [3]
+    .data            inited   0x1000'0484    0x1c  network.o [3]
+    .data            inited   0x1000'04a0    0x1c  network.o [3]
+    .data            inited   0x1000'04bc    0x1c  network_data.o [3]
+    .data            inited   0x1000'04d8    0x1c  network_data.o [3]
+    .data            inited   0x1000'04f4    0x18  network.o [3]
+    .data            inited   0x1000'050c    0x10  network.o [3]
+    .data            inited   0x1000'051c    0x10  network.o [3]
+    .data            inited   0x1000'052c    0x10  network.o [3]
+    .data            inited   0x1000'053c    0x10  network.o [3]
+    .data            inited   0x1000'054c    0x10  network.o [3]
+    .data            inited   0x1000'055c    0x10  network.o [3]
+    .data            inited   0x1000'056c    0x10  network.o [3]
+    .data            inited   0x1000'057c    0x10  network.o [3]
+    .data            inited   0x1000'058c    0x10  network.o [3]
+    .data            inited   0x1000'059c    0x10  network.o [3]
+    .data            inited   0x1000'05ac    0x10  network.o [3]
+    .data            inited   0x1000'05bc    0x10  network.o [3]
+    .data            inited   0x1000'05cc    0x10  network.o [3]
+    .data            inited   0x1000'05dc    0x10  network.o [3]
+    .data            inited   0x1000'05ec    0x10  network.o [3]
+    .data            inited   0x1000'05fc    0x10  network.o [3]
+    .data            inited   0x1000'060c    0x10  network.o [3]
+    .data            inited   0x1000'061c    0x10  network.o [3]
+    .data            inited   0x1000'062c    0x10  network.o [3]
+    .data            inited   0x1000'063c    0x10  network.o [3]
+    .data            inited   0x1000'064c    0x10  network.o [3]
+    .data            inited   0x1000'065c    0x10  network.o [3]
+    .data            inited   0x1000'066c    0x10  network.o [3]
+    .data            inited   0x1000'067c    0x10  network.o [3]
+    .data            inited   0x1000'068c    0x10  network.o [3]
+    .data            inited   0x1000'069c    0x10  network.o [3]
+    .data            inited   0x1000'06ac    0x10  network_data.o [3]
+    .data            inited   0x1000'06bc    0x10  network_data.o [3]
+    .data            inited   0x1000'06cc     0xc  network.o [3]
+    .data            inited   0x1000'06d8     0xc  network.o [3]
+    .data            inited   0x1000'06e4     0xc  stm32f4xx_hal.o [5]
+    .data            inited   0x1000'06f0     0x8  network.o [3]
+    .data            inited   0x1000'06f8     0x8  network.o [3]
+    .data            inited   0x1000'0700     0x8  network.o [3]
+    .data            inited   0x1000'0708     0x8  XShttio.o [7]
+    .data            inited   0x1000'0710     0x4  network.o [3]
+    .data            inited   0x1000'0714     0x4  network.o [3]
+    .data            inited   0x1000'0718     0x4  network.o [3]
+    .data            inited   0x1000'071c     0x4  network.o [3]
+    .data            inited   0x1000'0720     0x4  network.o [3]
+    .data            inited   0x1000'0724     0x4  network.o [3]
+    .data            inited   0x1000'0728     0x4  network.o [3]
+    .data            inited   0x1000'072c     0x4  network.o [3]
+    .data            inited   0x1000'0730     0x4  network.o [3]
+    .data            inited   0x1000'0734     0x4  network.o [3]
+    .data            inited   0x1000'0738     0x4  network.o [3]
+    .data            inited   0x1000'073c     0x4  network.o [3]
+    .data            inited   0x1000'0740     0x4  system_stm32f4xx.o [4]
+                            - 0x1000'0744   0x744
+
+"P2", part 2 of 3:                          0x154
+  .bss               zero     0x1000'0760    0x50  app_x-cube-ai.o [3]
+  .bss               zero     0x1000'07b0    0x50  xfiles.o [7]
+  .bss               zero     0x1000'0800    0x1c  network.o [3]
+  .bss               zero     0x1000'081c    0x1c  network.o [3]
+  .bss               zero     0x1000'0838    0x10  network.o [3]
+  .bss               zero     0x1000'0848    0x10  network.o [3]
+  .bss               zero     0x1000'0858     0x8  network.o [3]
+  .bss               zero     0x1000'0860     0x8  network.o [3]
+  .bss               zero     0x1000'0868     0x8  heap0.o [7]
+  .bss               zero     0x1000'0870     0x4  app_x-cube-ai.o [3]
+  .bss               zero     0x1000'0874     0x4  network.o [3]
+  .bss               zero     0x1000'0878     0x4  network.o [3]
+  .bss               zero     0x1000'087c     0x4  network.o [3]
+  .bss               zero     0x1000'0880     0x4  network.o [3]
+  .bss               zero     0x1000'0884     0x4  network.o [3]
+  .bss               zero     0x1000'0888     0x4  network.o [3]
+  .bss               zero     0x1000'088c     0x4  network.o [3]
+  .bss               zero     0x1000'0890     0x4  xfail_s.o [7]
+  .bss               zero     0x1000'0894     0x4  xgetmemchunk.o [7]
+                            - 0x1000'0898   0x154
+
+"P2", part 3 of 3:                          0xc00
+  CSTACK                      0x1000'0898   0x400  <Block>
+    CSTACK           uninit   0x1000'0898   0x400  <Block tail>
+  HEAP                        0x1000'0c98   0x800  <Block>
+    HEAP             uninit   0x1000'0c98   0x800  <Block tail>
+                            - 0x1000'1498   0xc00
+
+Unused ranges:
+
+         From           To       Size
+         ----           --       ----
+   0x800'4d56   0x82f'ffff  0x2f'b2aa
+  0x1000'1498  0x1000'ffff     0xeb68
+  0x2000'0000  0x2002'ffff   0x3'0000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x138:
+          0x1000'0760  0x138
+
+Copy/lz77 (__iar_lz77_init3)
+    1 source range, total size 0x252 (31% of destination):
+           0x800'4b04  0x252
+    1 destination range, total size 0x744:
+          0x1000'0000  0x744
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                         ro code  ro data  rw data
+    ------                         -------  -------  -------
+command line/config:
+    --------------------------------------------------------
+    Total:
+
+D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\EWARM: [1]
+    startup_stm32f479xx.o              824
+    --------------------------------------------------------
+    Total:                             824
+
+D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\Core: [2]
+    main.o                             204
+    stm32f4xx_hal_msp.o                 56
+    stm32f4xx_it.o                      20
+    --------------------------------------------------------
+    Total:                             280
+
+D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\X-CUBE-AI\App: [3]
+    app_x-cube-ai.o                    452      109      112
+    network.o                          452      548    1'724
+    network_data.o                      32       27       88
+    network_data_params.o                       568
+    --------------------------------------------------------
+    Total:                             936    1'252    1'924
+
+D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\CMSIS: [4]
+    system_stm32f4xx.o                  32        2        4
+    --------------------------------------------------------
+    Total:                              32        2        4
+
+D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver: [5]
+    stm32f4xx_hal.o                    144        4       12
+    stm32f4xx_hal_cortex.o             172
+    stm32f4xx_hal_pwr_ex.o             120
+    stm32f4xx_hal_rcc.o                384
+    stm32f4xx_hal_rcc_ex.o             836
+    --------------------------------------------------------
+    Total:                           1'656        4       12
+
+NetworkRuntime910_CM4_IAR.a: [6]
+    ai_datatypes_format.o              334
+    ai_datatypes_internal.o             60
+    ai_platform.o                      244
+    ai_platform_interface.o          2'448
+    core_common.o                       36
+    layers.o                           232
+    layers_conv2d_generic_float.o      312
+    layers_nl_generic_float.o          332
+    lite_dense_if32.o                1'976
+    lite_nl_relu_if32of32.o            184
+    st_int8_fill.o                     244
+    --------------------------------------------------------
+    Total:                           6'402
+
+dl7M_tlf.a: [7]
+    XShttio.o                            8        3        8
+    abort.o                              6
+    exit.o                               4
+    heap0.o                            292                 8
+    low_level_init.o                     4
+    printf.o                            40
+    putchar.o                           68
+    xfail_s.o                           64                 4
+    xfiles.o                                     23      152
+    xgetmemchunk.o                      44                 4
+    xlocale_c.o                          8       21       56
+    xprintffull_nomb.o               3'786
+    xprout.o                            22
+    --------------------------------------------------------
+    Total:                           4'346       47      232
+
+m7M_tls.a: [8]
+    DblAddSub.o                        590
+    DblCmpGe.o                          52
+    DblCmpLe.o                          52
+    DblDiv.o                           582
+    DblMul.o                           426
+    DblToS32.o                          54
+    DblToU32.o                          34
+    S32ToDbl.o                          34
+    U32ToDbl.o                          28
+    fpinit_M.o                          34
+    frexp.o                            112
+    ldexp.o                            314
+    --------------------------------------------------------
+    Total:                           2'312
+
+rt7M_tl.a: [9]
+    ABImemcpy_small.o                   24
+    ABImemset.o                        102
+    I64DivMod_small.o                  262
+    I64DivZer.o                          2
+    cexit.o                             10
+    cmain.o                             30
+    cstartup_M.o                        28
+    data_init.o                         40
+    lz77_init.o                        504
+    memchr.o                            88
+    memcmp.o                           104
+    memset.o                            20
+    strchr.o                            22
+    strlen.o                            54
+    zero_init3.o                        56
+    --------------------------------------------------------
+    Total:                           1'346
+
+shb_l.a: [10]
+    dwrite.o                            30
+    exit.o                              20
+    iarttio.o                          124
+    iarwrite.o                          34
+    iarwstd.o                           32
+    write.o                             16
+    --------------------------------------------------------
+    Total:                             256
+
+    Gaps                                27       32       28
+    Linker created                               44    3'072
+------------------------------------------------------------
+    Grand Total:                    18'417    1'381    5'272
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'4880          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'48ac          --   Gb  - Linker created -
+?main                    0x800'48cd         Code  Gb  cmain.o [9]
+ADC_IRQHandler           0x800'49d9         Code  Wk  startup_stm32f479xx.o [1]
+AHBPrescTable            0x800'48bc   0x10  Data  Gb  system_stm32f4xx.o [4]
+Aldata                  0x1000'0868    0x8  Data  Lc  heap0.o [7]
+BusFault_Handler         0x800'4939    0x2  Code  Gb  stm32f4xx_it.o [2]
+CAN1_RX0_IRQHandler      0x800'49e1         Code  Wk  startup_stm32f479xx.o [1]
+CAN1_RX1_IRQHandler      0x800'49e5         Code  Wk  startup_stm32f479xx.o [1]
+CAN1_SCE_IRQHandler      0x800'49e9         Code  Wk  startup_stm32f479xx.o [1]
+CAN1_TX_IRQHandler       0x800'49dd         Code  Wk  startup_stm32f479xx.o [1]
+CAN2_RX0_IRQHandler      0x800'4a91         Code  Wk  startup_stm32f479xx.o [1]
+CAN2_RX1_IRQHandler      0x800'4a95         Code  Wk  startup_stm32f479xx.o [1]
+CAN2_SCE_IRQHandler      0x800'4a99         Code  Wk  startup_stm32f479xx.o [1]
+CAN2_TX_IRQHandler       0x800'4a8d         Code  Wk  startup_stm32f479xx.o [1]
+CRYP_IRQHandler          0x800'4acd         Code  Wk  startup_stm32f479xx.o [1]
+CSTACK$$Base            0x1000'0898          --   Gb  - Linker created -
+CSTACK$$Limit           0x1000'0c98          --   Gb  - Linker created -
+DCMI_IRQHandler          0x800'4ac9         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream0_IRQHandler
+                         0x800'49bd         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream1_IRQHandler
+                         0x800'49c1         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream2_IRQHandler
+                         0x800'49c5         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream3_IRQHandler
+                         0x800'49c9         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream4_IRQHandler
+                         0x800'49cd         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream5_IRQHandler
+                         0x800'49d1         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream6_IRQHandler
+                         0x800'49d5         Code  Wk  startup_stm32f479xx.o [1]
+DMA1_Stream7_IRQHandler
+                         0x800'4a4d         Code  Wk  startup_stm32f479xx.o [1]
+DMA2D_IRQHandler         0x800'4af9         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream0_IRQHandler
+                         0x800'4a71         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream1_IRQHandler
+                         0x800'4a75         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream2_IRQHandler
+                         0x800'4a79         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream3_IRQHandler
+                         0x800'4a7d         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream4_IRQHandler
+                         0x800'4a81         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream5_IRQHandler
+                         0x800'4aa1         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream6_IRQHandler
+                         0x800'4aa5         Code  Wk  startup_stm32f479xx.o [1]
+DMA2_Stream7_IRQHandler
+                         0x800'4aa9         Code  Wk  startup_stm32f479xx.o [1]
+DSI_IRQHandler           0x800'4b01         Code  Wk  startup_stm32f479xx.o [1]
+DebugMon_Handler         0x800'493f    0x2  Code  Gb  stm32f4xx_it.o [2]
+ETH_IRQHandler           0x800'4a85         Code  Wk  startup_stm32f479xx.o [1]
+ETH_WKUP_IRQHandler      0x800'4a89         Code  Wk  startup_stm32f479xx.o [1]
+EXTI0_IRQHandler         0x800'49a9         Code  Wk  startup_stm32f479xx.o [1]
+EXTI15_10_IRQHandler     0x800'4a31         Code  Wk  startup_stm32f479xx.o [1]
+EXTI1_IRQHandler         0x800'49ad         Code  Wk  startup_stm32f479xx.o [1]
+EXTI2_IRQHandler         0x800'49b1         Code  Wk  startup_stm32f479xx.o [1]
+EXTI3_IRQHandler         0x800'49b5         Code  Wk  startup_stm32f479xx.o [1]
+EXTI4_IRQHandler         0x800'49b9         Code  Wk  startup_stm32f479xx.o [1]
+EXTI9_5_IRQHandler       0x800'49ed         Code  Wk  startup_stm32f479xx.o [1]
+Error_Handler            0x800'4581    0x4  Code  Gb  main.o [2]
+FLASH_IRQHandler         0x800'49a1         Code  Wk  startup_stm32f479xx.o [1]
+FMC_IRQHandler           0x800'4a51         Code  Wk  startup_stm32f479xx.o [1]
+FPU_IRQHandler           0x800'4ad5         Code  Wk  startup_stm32f479xx.o [1]
+HAL_GetTick              0x800'3599    0xc  Code  Wk  stm32f4xx_hal.o [5]
+HAL_IncTick              0x800'4949   0x10  Code  Wk  stm32f4xx_hal.o [5]
+HAL_Init                 0x800'4585   0x30  Code  Gb  stm32f4xx_hal.o [5]
+HAL_InitTick             0x800'43cd   0x40  Code  Wk  stm32f4xx_hal.o [5]
+HAL_MspInit              0x800'4645   0x38  Code  Gb  stm32f4xx_hal_msp.o [2]
+HAL_NVIC_SetPriority     0x800'4441   0x3a  Code  Gb  stm32f4xx_hal_cortex.o [5]
+HAL_NVIC_SetPriorityGrouping
+                         0x800'4427   0x1a  Code  Gb  stm32f4xx_hal_cortex.o [5]
+HAL_PWREx_EnableOverDrive
+                         0x800'45cd   0x48  Code  Gb  stm32f4xx_hal_pwr_ex.o [5]
+HAL_RCC_ClockConfig      0x800'424d  0x100  Code  Gb  stm32f4xx_hal_rcc.o [5]
+HAL_RCC_GetSysClockFreq
+                         0x800'436d   0x60  Code  Wk  stm32f4xx_hal_rcc.o [5]
+HAL_RCC_OscConfig        0x800'325d  0x30a  Code  Gb  stm32f4xx_hal_rcc_ex.o [5]
+HAL_SYSTICK_Config       0x800'447d   0x22  Code  Gb  stm32f4xx_hal_cortex.o [5]
+HASH_RNG_IRQHandler      0x800'4ad1         Code  Wk  startup_stm32f479xx.o [1]
+HEAP$$Base              0x1000'0c98          --   Gb  - Linker created -
+HEAP$$Limit             0x1000'1498          --   Gb  - Linker created -
+HardFault_Handler        0x800'4935    0x2  Code  Gb  stm32f4xx_it.o [2]
+I2C1_ER_IRQHandler       0x800'4a11         Code  Wk  startup_stm32f479xx.o [1]
+I2C1_EV_IRQHandler       0x800'4a0d         Code  Wk  startup_stm32f479xx.o [1]
+I2C2_ER_IRQHandler       0x800'4a19         Code  Wk  startup_stm32f479xx.o [1]
+I2C2_EV_IRQHandler       0x800'4a15         Code  Wk  startup_stm32f479xx.o [1]
+I2C3_ER_IRQHandler       0x800'4ab5         Code  Wk  startup_stm32f479xx.o [1]
+I2C3_EV_IRQHandler       0x800'4ab1         Code  Wk  startup_stm32f479xx.o [1]
+InStream_Read            0x800'380d   0x20  Code  Lc  lz77_init.o [9]
+InStream_StepRegion      0x800'37f9   0x14  Code  Lc  lz77_init.o [9]
+LTDC_ER_IRQHandler       0x800'4af5         Code  Wk  startup_stm32f479xx.o [1]
+LTDC_IRQHandler          0x800'4af1         Code  Wk  startup_stm32f479xx.o [1]
+MX_X_CUBE_AI_Init        0x800'3a11   0x66  Code  Gb  app_x-cube-ai.o [3]
+MX_X_CUBE_AI_Process     0x800'3a79   0x92  Code  Gb  app_x-cube-ai.o [3]
+MemManage_Handler        0x800'4937    0x2  Code  Gb  stm32f4xx_it.o [2]
+NMI_Handler              0x800'4933    0x2  Code  Gb  stm32f4xx_it.o [2]
+OTG_FS_IRQHandler        0x800'4a9d         Code  Wk  startup_stm32f479xx.o [1]
+OTG_FS_WKUP_IRQHandler   0x800'4a39         Code  Wk  startup_stm32f479xx.o [1]
+OTG_HS_EP1_IN_IRQHandler
+                         0x800'4abd         Code  Wk  startup_stm32f479xx.o [1]
+OTG_HS_EP1_OUT_IRQHandler
+                         0x800'4ab9         Code  Wk  startup_stm32f479xx.o [1]
+OTG_HS_IRQHandler        0x800'4ac5         Code  Wk  startup_stm32f479xx.o [1]
+OTG_HS_WKUP_IRQHandler   0x800'4ac1         Code  Wk  startup_stm32f479xx.o [1]
+OutStream_Write          0x800'382d   0x46  Code  Lc  lz77_init.o [9]
+PVD_IRQHandler           0x800'4995         Code  Wk  startup_stm32f479xx.o [1]
+PendSV_Handler           0x800'4941    0x2  Code  Gb  stm32f4xx_it.o [2]
+QUADSPI_IRQHandler       0x800'4afd         Code  Wk  startup_stm32f479xx.o [1]
+RCC_IRQHandler           0x800'49a5         Code  Wk  startup_stm32f479xx.o [1]
+RTC_Alarm_IRQHandler     0x800'4a35         Code  Wk  startup_stm32f479xx.o [1]
+RTC_WKUP_IRQHandler      0x800'499d         Code  Wk  startup_stm32f479xx.o [1]
+Region$$Table$$Base      0x800'4880          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'48ac          --   Gb  - Linker created -
+Reset_Handler            0x800'4959         Code  Wk  startup_stm32f479xx.o [1]
+SAI1_IRQHandler          0x800'4aed         Code  Wk  startup_stm32f479xx.o [1]
+SDIO_IRQHandler          0x800'4a55         Code  Wk  startup_stm32f479xx.o [1]
+SPI1_IRQHandler          0x800'4a1d         Code  Wk  startup_stm32f479xx.o [1]
+SPI2_IRQHandler          0x800'4a21         Code  Wk  startup_stm32f479xx.o [1]
+SPI3_IRQHandler          0x800'4a5d         Code  Wk  startup_stm32f479xx.o [1]
+SPI4_IRQHandler          0x800'4ae1         Code  Wk  startup_stm32f479xx.o [1]
+SPI5_IRQHandler          0x800'4ae5         Code  Wk  startup_stm32f479xx.o [1]
+SPI6_IRQHandler          0x800'4ae9         Code  Wk  startup_stm32f479xx.o [1]
+SVC_Handler              0x800'493d    0x2  Code  Gb  stm32f4xx_it.o [2]
+SysTick_Handler          0x800'4943    0x4  Code  Gb  stm32f4xx_it.o [2]
+SystemClock_Config       0x800'44cd   0xac  Code  Gb  main.o [2]
+SystemCoreClock         0x1000'0740    0x4  Data  Gb  system_stm32f4xx.o [4]
+SystemInit               0x800'48ad    0xc  Code  Gb  system_stm32f4xx.o [4]
+TAMP_STAMP_IRQHandler    0x800'4999         Code  Wk  startup_stm32f479xx.o [1]
+TIM1_BRK_TIM9_IRQHandler
+                         0x800'49f1         Code  Wk  startup_stm32f479xx.o [1]
+TIM1_CC_IRQHandler       0x800'49fd         Code  Wk  startup_stm32f479xx.o [1]
+TIM1_TRG_COM_TIM11_IRQHandler
+                         0x800'49f9         Code  Wk  startup_stm32f479xx.o [1]
+TIM1_UP_TIM10_IRQHandler
+                         0x800'49f5         Code  Wk  startup_stm32f479xx.o [1]
+TIM2_IRQHandler          0x800'4a01         Code  Wk  startup_stm32f479xx.o [1]
+TIM3_IRQHandler          0x800'4a05         Code  Wk  startup_stm32f479xx.o [1]
+TIM4_IRQHandler          0x800'4a09         Code  Wk  startup_stm32f479xx.o [1]
+TIM5_IRQHandler          0x800'4a59         Code  Wk  startup_stm32f479xx.o [1]
+TIM6_DAC_IRQHandler      0x800'4a69         Code  Wk  startup_stm32f479xx.o [1]
+TIM7_IRQHandler          0x800'4a6d         Code  Wk  startup_stm32f479xx.o [1]
+TIM8_BRK_TIM12_IRQHandler
+                         0x800'4a3d         Code  Wk  startup_stm32f479xx.o [1]
+TIM8_CC_IRQHandler       0x800'4a49         Code  Wk  startup_stm32f479xx.o [1]
+TIM8_TRG_COM_TIM14_IRQHandler
+                         0x800'4a45         Code  Wk  startup_stm32f479xx.o [1]
+TIM8_UP_TIM13_IRQHandler
+                         0x800'4a41         Code  Wk  startup_stm32f479xx.o [1]
+UART4_IRQHandler         0x800'4a61         Code  Wk  startup_stm32f479xx.o [1]
+UART5_IRQHandler         0x800'4a65         Code  Wk  startup_stm32f479xx.o [1]
+UART7_IRQHandler         0x800'4ad9         Code  Wk  startup_stm32f479xx.o [1]
+UART8_IRQHandler         0x800'4add         Code  Wk  startup_stm32f479xx.o [1]
+USART1_IRQHandler        0x800'4a25         Code  Wk  startup_stm32f479xx.o [1]
+USART2_IRQHandler        0x800'4a29         Code  Wk  startup_stm32f479xx.o [1]
+USART3_IRQHandler        0x800'4a2d         Code  Wk  startup_stm32f479xx.o [1]
+USART6_IRQHandler        0x800'4aad         Code  Wk  startup_stm32f479xx.o [1]
+UsageFault_Handler       0x800'493b    0x2  Code  Gb  stm32f4xx_it.o [2]
+WWDG_IRQHandler          0x800'4991         Code  Wk  startup_stm32f479xx.o [1]
+_LC                      0x800'01b5    0x6  Code  Lc  xprintffull_nomb.o [7]
+_LitobFullNoMb           0x800'0e9d  0x114  Code  Lc  xprintffull_nomb.o [7]
+_Locale_lconv           0x1000'015c   0x38  Data  Lc  xlocale_c.o [7]
+_PrintfFullNoMb          0x800'01bb  0xcb4  Code  Gb  xprintffull_nomb.o [7]
+_Prout                   0x800'491d   0x16  Code  Gb  xprout.o [7]
+_PutcharsFullNoMb        0x800'1009   0x2e  Code  Lc  xprintffull_nomb.o [7]
+__NVIC_SetPriority       0x800'440d   0x1a  Code  Lc  stm32f4xx_hal_cortex.o [5]
+__aeabi_cdcmple          0x800'11f1         Code  Gb  DblCmpLe.o [8]
+__aeabi_cdrcmple         0x800'1225         Code  Gb  DblCmpGe.o [8]
+__aeabi_d2iz             0x800'1395         Code  Gb  DblToS32.o [8]
+__aeabi_d2uiz            0x800'1889         Code  Gb  DblToU32.o [8]
+__aeabi_ddiv             0x800'1641         Code  Gb  DblDiv.o [8]
+__aeabi_dmul             0x800'18c9         Code  Gb  DblMul.o [8]
+__aeabi_dsub             0x800'155d         Code  Gb  DblAddSub.o [8]
+__aeabi_i2d              0x800'13cd         Code  Gb  S32ToDbl.o [8]
+__aeabi_ldiv0            0x800'1b89         Code  Gb  I64DivZer.o [9]
+__aeabi_memset           0x800'467d         Code  Gb  ABImemset.o [9]
+__aeabi_ui2d             0x800'18ad         Code  Gb  U32ToDbl.o [8]
+__basic_free_intern      0x800'3e4d   0x74  Code  Lc  heap0.o [7]
+__basic_malloc           0x800'3da1   0x18  Code  Gb  heap0.o [7]
+__basic_malloc_intern    0x800'3db9   0x94  Code  Lc  heap0.o [7]
+__cmain                  0x800'48cd         Code  Gb  cmain.o [9]
+__data_GetMemChunk       0x800'3ee5   0x2c  Code  Gb  xgetmemchunk.o [7]
+__data_GetMemChunk::start
+                        0x1000'0894    0x4  Data  Lc  xgetmemchunk.o [7]
+__dwrite                 0x800'479d   0x1e  Code  Gb  dwrite.o [10]
+__exit                   0x800'1b8d   0x14  Code  Gb  exit.o [10]
+__iar_Fail_s             0x800'1099   0x1c  Code  Gb  xfail_s.o [7]
+__iar_Memchr             0x800'1111         Code  Gb  memchr.o [9]
+__iar_Memset             0x800'467d         Code  Gb  ABImemset.o [9]
+__iar_Memset_word        0x800'4685         Code  Gb  ABImemset.o [9]
+__iar_Stdout            0x1000'0114   0x48  Data  Gb  xfiles.o [7]
+__iar_Strchr             0x800'1081         Code  Gb  strchr.o [9]
+__iar_close_ttio         0x800'1ba1   0x2c  Code  Gb  iarttio.o [10]
+__iar_data_init3         0x800'4835   0x28  Code  Gb  data_init.o [9]
+__iar_frexp              0x800'118d         Code  Gb  frexp.o [8]
+__iar_frexpl             0x800'118d         Code  Gb  frexp.o [8]
+__iar_get_ttio           0x800'1bcd   0x4c  Code  Gb  iarttio.o [10]
+__iar_init_vfp           0x800'485d         Code  Gb  fpinit_M.o [8]
+__iar_ldexp64            0x800'1259         Code  Gb  ldexp.o [8]
+__iar_lookup_ttioh       0x800'1c1d    0x8  Code  Gb  XShttio.o [7]
+__iar_lz77_init3         0x800'3873  0x17e  Code  Gb  lz77_init.o [9]
+__iar_program_start      0x800'4901         Code  Gb  cstartup_M.o [9]
+__iar_scalbln64          0x800'1259         Code  Gb  ldexp.o [8]
+__iar_scalbn64           0x800'1259         Code  Gb  ldexp.o [8]
+__iar_sh_stdout          0x800'47bb   0x20  Code  Gb  iarwstd.o [10]
+__iar_sh_write           0x800'47db   0x22  Code  Gb  iarwrite.o [10]
+__iar_small_Memcpy       0x800'116d         Code  Gb  ABImemcpy_small.o [9]
+__iar_small_memcpy       0x800'1169         Code  Gb  ABImemcpy_small.o [9]
+__iar_small_memcpy4      0x800'1169         Code  Gb  ABImemcpy_small.o [9]
+__iar_small_memcpy8      0x800'1169         Code  Gb  ABImemcpy_small.o [9]
+__iar_small_uldivmod     0x800'1a7d         Code  Gb  I64DivMod_small.o [9]
+__iar_softfp___iar_frexp64
+                         0x800'1181         Code  Gb  frexp.o [8]
+__iar_softfp_frexp       0x800'1181         Code  Gb  frexp.o [8]
+__iar_softfp_frexpl      0x800'1181         Code  Gb  frexp.o [8]
+__iar_ttio_handles      0x1000'0708    0x8  Data  Lc  XShttio.o [7]
+__iar_zero_init3         0x800'47fd   0x38  Code  Gb  zero_init3.o [9]
+__low_level_init         0x800'48eb    0x4  Code  Gb  low_level_init.o [7]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f479xx.o [1]
+__write                  0x800'478d   0x10  Code  Gb  write.o [10]
+_ai_platform_get_io_buffers_info
+                         0x800'1c25   0xd8  Code  Lc  ai_platform_interface.o [6]
+_call_main               0x800'48d9         Code  Gb  cmain.o [9]
+_exit                    0x800'48f5         Code  Gb  cexit.o [9]
+_forward_lite_nl_relu_thresholded_if32of32
+                         0x800'3f65   0x34  Code  Lc  layers_nl_generic_float.o [6]
+_hidden2_Gemm_output_0_bias
+                        0x1000'0350   0x1c  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_bias_array
+                        0x1000'0090   0x10  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_chain
+                         0x800'4978    0x8  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_layer
+                        0x1000'0484   0x1c  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_output
+                        0x1000'03f8   0x1c  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_output_array
+                        0x1000'0030   0x10  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_weights
+                        0x1000'0334   0x1c  Data  Lc  network.o [3]
+_hidden2_Gemm_output_0_weights_array
+                        0x1000'0080   0x10  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_bias
+                        0x1000'0318   0x1c  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_bias_array
+                        0x1000'0070   0x10  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_chain
+                         0x800'4988    0x8  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_layer
+                        0x1000'04a0   0x1c  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_output
+                        0x1000'03c0   0x1c  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_output_array
+                        0x1000'0010   0x10  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_weights
+                        0x1000'044c   0x1c  Data  Lc  network.o [3]
+_hidden_Gemm_output_0_weights_array
+                        0x1000'0060   0x10  Data  Lc  network.o [3]
+_platform_ai_buffer_array_copy
+                         0x800'1d05   0xb4  Code  Lc  ai_platform_interface.o [6]
+_platform_get_table_map_from_buffer
+                         0x800'1df3   0x88  Code  Lc  ai_platform_interface.o [6]
+_platform_get_table_map_from_buffer_array
+                         0x800'1e7b   0x64  Code  Lc  ai_platform_interface.o [6]
+_platform_network_sanity_check{1}{2}::e
+                         0x800'2598    0x4  Data  Lc  ai_platform_interface.o [6]
+_platform_network_sanity_check{4}{5}::e
+                         0x800'259c    0x4  Data  Lc  ai_platform_interface.o [6]
+_platform_network_sanity_check{9}::signatures
+                         0x800'25a0    0x4  Data  Lc  ai_platform_interface.o [6]
+_platform_network_sanity_check{9}{10}{11}::e
+                         0x800'25a4    0x4  Data  Lc  ai_platform_interface.o [6]
+_platform_network_state_setup
+                         0x800'1db9   0x3a  Code  Lc  ai_platform_interface.o [6]
+_relu_1_Relu_output_0_chain
+                         0x800'4970    0x8  Data  Lc  network.o [3]
+_relu_1_Relu_output_0_layer
+                        0x1000'0284   0x20  Data  Lc  network.o [3]
+_relu_1_Relu_output_0_output
+                        0x1000'0414   0x1c  Data  Lc  network.o [3]
+_relu_1_Relu_output_0_output_array
+                        0x1000'0040   0x10  Data  Lc  network.o [3]
+_relu_Relu_output_0_chain
+                         0x800'4980    0x8  Data  Lc  network.o [3]
+_relu_Relu_output_0_layer
+                        0x1000'02a4   0x20  Data  Lc  network.o [3]
+_relu_Relu_output_0_output
+                        0x1000'03dc   0x1c  Data  Lc  network.o [3]
+_relu_Relu_output_0_output_array
+                        0x1000'0020   0x10  Data  Lc  network.o [3]
+abort                    0x800'1b83    0x6  Code  Gb  abort.o [7]
+ai_array_get_data_byte_size
+                         0x800'26e1   0x22  Code  Gb  ai_datatypes_format.o [6]
+ai_array_to_buffer_fmt   0x800'25b5   0xe2  Code  Gb  ai_datatypes_format.o [6]
+ai_buffer_array_item_set_address
+                         0x800'2811   0x24  Code  Gb  ai_platform.o [6]
+ai_buffer_array_sane     0x800'27eb   0x1a  Code  Gb  ai_platform.o [6]
+ai_buffer_get_size       0x800'2741   0xaa  Code  Gb  ai_platform.o [6]
+ai_check_custom_types    0x800'2859   0x26  Code  Gb  layers.o [6]
+ai_check_custom_types::ref_signatures
+                         0x800'293c    0x4  Data  Lc  layers.o [6]
+ai_input                0x1000'02d0    0x4  Data  Lc  app_x-cube-ai.o [3]
+ai_layers_forward_all    0x800'28c9   0x74  Code  Gb  layers.o [6]
+ai_layers_init_all       0x800'287f   0x1c  Code  Gb  layers.o [6]
+ai_layers_post_init_all
+                         0x800'289b   0x2e  Code  Gb  layers.o [6]
+ai_log_err               0x800'39f1   0x20  Code  Lc  app_x-cube-ai.o [3]
+ai_network_create        0x800'3be1   0x14  Code  Gb  network.o [3]
+ai_network_create_and_init
+                         0x800'3bf5   0x84  Code  Gb  network.o [3]
+ai_network_data_params_get
+                         0x800'3ec5   0x10  Code  Gb  network_data.o [3]
+ai_network_data_params_get::map_activations
+                         0x800'3ed4    0x8  Data  Lc  network_data.o [3]
+ai_network_data_params_get::map_weights
+                         0x800'3edc    0x8  Data  Lc  network_data.o [3]
+ai_network_get_error     0x800'3bdd    0x4  Code  Gb  network.o [3]
+ai_network_init          0x800'3c91   0xfe  Code  Gb  network.o [3]
+ai_network_inputs_get    0x800'3c79    0xc  Code  Gb  network.o [3]
+ai_network_outputs_get   0x800'3c85    0xc  Code  Gb  network.o [3]
+ai_network_run           0x800'3d9d    0x4  Code  Gb  network.o [3]
+ai_output               0x1000'02d4    0x4  Data  Lc  app_x-cube-ai.o [3]
+ai_platform_bind_network_params
+                         0x800'1f3d   0x30  Code  Gb  ai_platform_interface.o [6]
+ai_platform_get_activations_map
+                         0x800'1f0d   0x30  Code  Gb  ai_platform_interface.o [6]
+ai_platform_get_weights_map
+                         0x800'1edf   0x2e  Code  Gb  ai_platform_interface.o [6]
+ai_platform_inputs_get   0x800'1f95   0x4c  Code  Gb  ai_platform_interface.o [6]
+ai_platform_network_create
+                         0x800'2031   0x7a  Code  Gb  ai_platform_interface.o [6]
+ai_platform_network_create{7}{8}::e
+                         0x800'25b0    0x4  Data  Lc  ai_platform_interface.o [6]
+ai_platform_network_get_error
+                         0x800'1f6d   0x1c  Code  Gb  ai_platform_interface.o [6]
+ai_platform_network_get_error{1}{2}::error
+                         0x800'25a8    0x4  Data  Lc  ai_platform_interface.o [6]
+ai_platform_network_init
+                         0x800'20ab  0x108  Code  Gb  ai_platform_interface.o [6]
+ai_platform_network_post_init
+                         0x800'21b3   0x62  Code  Gb  ai_platform_interface.o [6]
+ai_platform_network_process
+                         0x800'2219  0x376  Code  Gb  ai_platform_interface.o [6]
+ai_platform_network_set_error
+                         0x800'1f89    0xc  Code  Gb  ai_platform_interface.o [6]
+ai_platform_outputs_get
+                         0x800'1fe1   0x50  Code  Gb  ai_platform_interface.o [6]
+ai_shape_get_size        0x800'3f11   0x52  Code  Lc  layers_nl_generic_float.o [6]
+ai_version_get           0x800'2705    0xc  Code  Gb  ai_datatypes_internal.o [6]
+core_get_error           0x800'2839    0xa  Code  Gb  core_common.o [6]
+core_init                0x800'2835    0x4  Code  Gb  core_common.o [6]
+core_set_error           0x800'2843   0x16  Code  Gb  core_common.o [6]
+data_activations0       0x1000'02dc    0x4  Data  Gb  app_x-cube-ai.o [3]
+data_ins                0x1000'02c4    0x4  Data  Gb  app_x-cube-ai.o [3]
+data_outs               0x1000'02c8    0x4  Data  Gb  app_x-cube-ai.o [3]
+exit                     0x800'48ef    0x4  Code  Gb  exit.o [7]
+forward_dense            0x800'4115  0x12a  Code  Gb  layers_conv2d_generic_float.o [6]
+forward_lite_dense_if32of32wf32
+                         0x800'2a9d  0x30e  Code  Gb  lite_dense_if32.o [6]
+forward_lite_dense_if32of32wf32_lut4
+                         0x800'2db1  0x24e  Code  Gb  lite_dense_if32.o [6]
+forward_lite_dense_if32of32wf32_lut8
+                         0x800'3005  0x24a  Code  Gb  lite_dense_if32.o [6]
+forward_lite_nl_relu_generic_if32of32_kernel
+                         0x800'405d   0xb2  Code  Gb  lite_nl_relu_if32of32.o [6]
+forward_relu             0x800'3f9d   0xbc  Code  Gb  layers_nl_generic_float.o [6]
+g_network               0x1000'00c8   0x4c  Data  Lc  network.o [3]
+g_network_activations_map
+                        0x1000'00c0    0x4  Data  Lc  network.o [3]
+g_network_data_map_activations
+                        0x1000'04bc   0x1c  Data  Gb  network_data.o [3]
+g_network_data_map_weights
+                        0x1000'04d8   0x1c  Data  Gb  network_data.o [3]
+g_network_weights_map   0x1000'00c4    0x4  Data  Lc  network.o [3]
+get_tensor_byte_size     0x800'2711   0x24  Code  Gb  ai_datatypes_internal.o [6]
+input_data              0x1000'02d8    0x4  Data  Gb  app_x-cube-ai.o [3]
+input_output            0x1000'03a4   0x1c  Data  Lc  network.o [3]
+input_output_array      0x1000'0000   0x10  Data  Lc  network.o [3]
+ldexp                    0x800'1259         Code  Gb  ldexp.o [8]
+ldexpl                   0x800'1259         Code  Gb  ldexp.o [8]
+localeconv               0x800'1a75    0x4  Code  Gb  xlocale_c.o [7]
+main                     0x800'44b9   0x14  Code  Gb  main.o [2]
+memchr                   0x800'1111         Code  Gb  memchr.o [9]
+memcmp                   0x800'2a35         Code  Gb  memcmp.o [9]
+memset                   0x800'45b9   0x14  Code  Gb  memset.o [9]
+network                 0x1000'02cc    0x4  Data  Lc  app_x-cube-ai.o [3]
+obuf                    0x1000'07b0   0x50  Data  Lc  xfiles.o [7]
+output_bias             0x1000'0388   0x1c  Data  Lc  network.o [3]
+output_bias_array       0x1000'00b0   0x10  Data  Lc  network.o [3]
+output_chain             0x800'4968    0x8  Data  Lc  network.o [3]
+output_data             0x1000'0870    0x4  Data  Gb  app_x-cube-ai.o [3]
+output_layer            0x1000'0468   0x1c  Data  Lc  network.o [3]
+output_output           0x1000'0430   0x1c  Data  Lc  network.o [3]
+output_output_array     0x1000'0050   0x10  Data  Lc  network.o [3]
+output_weights          0x1000'036c   0x1c  Data  Lc  network.o [3]
+output_weights_array    0x1000'00a0   0x10  Data  Lc  network.o [3]
+pool0                   0x1000'0760   0x50  Data  Lc  app_x-cube-ai.o [3]
+printf                   0x800'3bb5   0x28  Code  Gb  printf.o [7]
+putchar                  0x800'4749   0x44  Code  Gb  putchar.o [7]
+s_network_weights_array_u64
+                         0x800'35c0  0x238  Data  Gb  network_data_params.o [3]
+scalbln                  0x800'1259         Code  Gb  ldexp.o [8]
+scalblnl                 0x800'1259         Code  Gb  ldexp.o [8]
+scalbn                   0x800'1259         Code  Gb  ldexp.o [8]
+scalbnl                  0x800'1259         Code  Gb  ldexp.o [8]
+scale                    0x800'0fb1   0x46  Code  Lc  xprintffull_nomb.o [7]
+sec_hand                0x1000'0890    0x4  Data  Lc  xfail_s.o [7]
+st_int8_copy             0x800'2941   0xf4  Code  Gb  st_int8_fill.o [6]
+strchr                   0x800'1081         Code  Gb  strchr.o [9]
+strlen                   0x800'10d9         Code  Gb  strlen.o [9]
+uwTick                  0x1000'06e8    0x4  Data  Gb  stm32f4xx_hal.o [5]
+uwTickFreq              0x1000'06e4    0x1  Data  Gb  stm32f4xx_hal.o [5]
+uwTickPrio              0x1000'06ec    0x4  Data  Gb  stm32f4xx_hal.o [5]
+
+
+[1] = D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\EWARM
+[2] = D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\Core
+[3] = D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Application\User\X-CUBE-AI\App
+[4] = D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\CMSIS
+[5] = D:\Repo\Embedded-Repo\IAR_REPO\f479_2\EWARM\f479_2\Obj\Drivers\STM32F4xx_HAL_Driver
+[6] = NetworkRuntime910_CM4_IAR.a
+[7] = dl7M_tlf.a
+[8] = m7M_tls.a
+[9] = rt7M_tl.a
+[10] = shb_l.a
+
+  18'417 bytes of readonly  code memory
+   1'381 bytes of readonly  data memory
+   5'272 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

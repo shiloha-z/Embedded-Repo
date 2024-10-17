@@ -233,6 +233,33 @@ void demo6(){
   lv_obj_add_event_cb(btnm,btnm_event_handler,LV_EVENT_VALUE_CHANGED,textarea);
 }
 
+void example_lvgl_demo_ui2()
+{
+    lv_obj_t* screen = lv_scr_act();
+
+    // 初始化样式
+    static lv_style_t style;
+    lv_style_init(&style);
+
+    // 设置背景颜色为红色（RGB: 255, 0, 0）
+    lv_style_set_bg_color(&style, lv_color_make(255, 255, 255));
+    lv_style_set_bg_opa(&style, LV_OPA_COVER);  // 设置不透明
+    // 将样式应用到屏幕
+    lv_obj_add_style(screen, &style, 0);
+
+    static lv_style_t style2;
+    lv_style_init(&style2);
+    lv_style_set_text_color(&style2, lv_color_make(0, 0, 0));
+
+    LV_FONT_DECLARE(alimama30);
+    lv_style_set_text_font(&style2, &alimama30);
+
+    lv_obj_t* label = lv_label_create(screen);
+    lv_obj_add_style(label, &style2, 0);
+    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+    lv_label_set_text(label, "你好，世界");
+}
+
 
 int main(int argc, char **argv)
 {
@@ -271,7 +298,8 @@ int main(int argc, char **argv)
   // first_screen();
   //demo_img();
   // demo5();
-  demo6();
+  //demo6();
+  example_lvgl_demo_ui2();
   while(1) {
       /* Periodically call the lv_task handler.
        * It could be done in a timer interrupt or an OS task too.*/

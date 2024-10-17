@@ -1,0 +1,10 @@
+f407_freemodbus\mbutils.o: ..\freemodbus\modbus\mbutils.c
+f407_freemodbus\mbutils.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdlib.h
+f407_freemodbus\mbutils.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\string.h
+f407_freemodbus\mbutils.o: ..\freemodbus\modbus\port.h
+f407_freemodbus\mbutils.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\assert.h
+f407_freemodbus\mbutils.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\inttypes.h
+f407_freemodbus\mbutils.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdint.h
+f407_freemodbus\mbutils.o: ..\freemodbus\modbus\mb.h
+f407_freemodbus\mbutils.o: ..\freemodbus\modbus\mbport.h
+f407_freemodbus\mbutils.o: ..\freemodbus\modbus\mbproto.h

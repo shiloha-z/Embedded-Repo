@@ -1,0 +1,16 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\freemodbus\\demo\\ATSAM3S_FREERTOS\\demo.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\freemodbus\\demo\\ATSAM3S_FREERTOS\\demo.eww": {
+      "configs": {},
+      "selected": {
+        "path": "${workspaceFolder}\\freemodbus\\demo\\ATSAM3S_FREERTOS\\demo.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "D:\\App_Bins\\IAR Systems\\Embedded Workbench 9.1"
+  }
+}
