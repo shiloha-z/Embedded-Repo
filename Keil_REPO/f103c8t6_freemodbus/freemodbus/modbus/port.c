@@ -51,61 +51,98 @@ eMBErrorCode eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRe
     return MB_ENOERR;
 }
  
-// ??????????
-static USHORT usHoldingReg[1]; // ??1?16????????ADC???
-
-// ?? eMBRegHoldingCB ????,?????????
-eMBErrorCode eMBRegHoldingCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode)
+/// CMD6?3?16????????
+eMBErrorCode eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode )
 {
-    if (usAddress == 1)  // ??????????1
-    {
-        switch (eMode)
-        {
-        case MB_REG_READ:  // ???????
-            // ? ADC ?????????????,?? Modbus ???
-            pucRegBuffer[0] = (usHoldingReg[0] >> 8) & 0xFF;  // ???
-            pucRegBuffer[1] = usHoldingReg[0] & 0xFF;         // ???
-            break;
-
-        case MB_REG_WRITE:  // ????????????(??)
-            usHoldingReg[0] = (pucRegBuffer[0] << 8) | pucRegBuffer[1];  // ??????
-            break;
-        }
-        return MB_ENOERR;  // ????
-    }
-    return MB_ENOREG;  // ??????
-}
-
+    USHORT usRegIndex = usAddress - 1;
  
-// ???????????????(?????1???)
-UCHAR ucSwitchStatus = 0;  // 0 ????,1 ????
-
-eMBErrorCode eMBRegCoilsCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNCoils, eMBRegisterMode eMode)
-{
-    USHORT usRegIndex = usAddress - 1;  // Modbus ???1??,??????0??
-    
-    // ????1???????,????????
-    if (usRegIndex != 0 || usNCoils != 1)  // ???????,???1??
+    // ????
+    if((usRegIndex + usNRegs) > REG_HOLD_SIZE)
     {
-        return MB_ENOREG;  // ?????????
+        return MB_ENOREG;
     }
-
-    // ?????:??????????
-    if (eMode == MB_REG_WRITE)
+ 
+    // ????
+    if(eMode == MB_REG_WRITE)
     {
-        // ????????????
-        ucSwitchStatus = (*pucRegBuffer & 0x01);  // ????1???????
-        // ??????????????????,?????????
+        while( usNRegs > 0 )
+        {
+            REG_HOLD_BUF[usRegIndex] = (pucRegBuffer[0] << 8) | pucRegBuffer[1];
+            pucRegBuffer += 2;
+            usRegIndex++;
+            usNRegs--;
+        }
     }
-    // ?????:????????????
+ 
+    // ????
     else
     {
-        *pucRegBuffer = ucSwitchStatus;  // ????????
+        while( usNRegs > 0 )
+        {
+            *pucRegBuffer++ = ( unsigned char )( REG_HOLD_BUF[usRegIndex] >> 8 );
+            *pucRegBuffer++ = ( unsigned char )( REG_HOLD_BUF[usRegIndex] & 0xFF );
+            usRegIndex++;
+            usNRegs--;
+        }
     }
-
-    return MB_ENOERR;  // ????
+ 
+    return MB_ENOERR;
 }
-
+ 
+/// CMD1?5?15????????
+eMBErrorCode eMBRegCoilsCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNCoils, eMBRegisterMode eMode )
+{
+    USHORT usRegIndex   = usAddress - 1;
+    UCHAR  ucBits       = 0;
+    UCHAR  ucState      = 0;
+    UCHAR  ucLoops      = 0;
+ 
+    // ????
+    if((usRegIndex + usNCoils) > REG_COILS_SIZE)
+    {
+        return MB_ENOREG;
+    }
+ 
+    if(eMode == MB_REG_WRITE)
+    {
+        ucLoops = (usNCoils - 1) / 8 + 1;
+        while(ucLoops != 0)
+        {
+            ucState = *pucRegBuffer++;
+            ucBits  = 0;
+            while(usNCoils != 0 && ucBits < 8)
+            {
+                REG_COILS_BUF[usRegIndex++] = (ucState >> ucBits) & 0X01;
+                usNCoils--;
+                ucBits++;
+            }
+            ucLoops--;
+        }
+    }
+    else
+    {
+        ucLoops = (usNCoils - 1) / 8 + 1;
+        while(ucLoops != 0)
+        {
+            ucState = 0;
+            ucBits  = 0;
+            while(usNCoils != 0 && ucBits < 8)
+            {
+                if(REG_COILS_BUF[usRegIndex])
+                {
+                    ucState |= (1 << ucBits);
+                }
+                usNCoils--;
+                usRegIndex++;
+                ucBits++;
+            }
+            *pucRegBuffer++ = ucState;
+            ucLoops--;
+        }
+    }
+ 
+    return MB_ENOERR;
+}
  
 /// CMD2????????
 eMBErrorCode eMBRegDiscreteCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNDiscrete )
@@ -148,4 +185,4 @@ eMBErrorCode eMBRegDiscreteCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT us
  
     return MB_ENOERR;
 }
-
+ 

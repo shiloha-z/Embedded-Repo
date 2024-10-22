@@ -33,33 +33,33 @@ static void prvvTIMERExpiredISR( void );
 /* ----------------------- Start implementation -----------------------------*/
 BOOL xMBPortTimersInit( USHORT usTim1Timerout50us )
 {
-    // TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-    // TIM_MasterConfigTypeDef sMasterConfig = {0};
- 
-    // htim4.Instance = TIM4;
-    // htim4.Init.Prescaler = 3599;								// 50us????
-    // htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-    // htim4.Init.Period = usTim1Timerout50us - 1;					// usTim1Timerout50us * 50?????????
-    // htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    // htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-    // if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
-    // {
-    //     return FALSE;
-    // }
-    // sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-    // if (HAL_TIM_ConfigClockSource(&htim4, &sClockSourceConfig) != HAL_OK)
-    // {
-    //     return FALSE;
-    // }
-    // sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-    // sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    // if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
-    // {
-    //     return FALSE;
-    // }
- 
-	// __HAL_TIM_CLEAR_FLAG(&htim4, TIM_FLAG_UPDATE);              // ?????????????,?????????????
-    // __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_UPDATE);					// ?????????
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 3599;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = usTim1Timerout50us - 1;	// usTim1Timerout50us * 50即为定时器溢出时间
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim4, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+	
+	__HAL_TIM_CLEAR_FLAG(&htim4, TIM_FLAG_UPDATE);              // ?????????????,?????????????
+  __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_UPDATE);					// ?????????
 
     return TRUE;
 }
@@ -72,8 +72,7 @@ inline void vMBPortTimersEnable(  )
  
 inline void vMBPortTimersDisable(  )
 {
-    __HAL_TIM_SET_COUNTER(&htim4,0);
-    HAL_TIM_Base_Stop_IT(&htim4);
+		__HAL_TIM_DISABLE(&htim4);
 }
  
 /* Create an ISR which is called whenever the timer has expired. This function

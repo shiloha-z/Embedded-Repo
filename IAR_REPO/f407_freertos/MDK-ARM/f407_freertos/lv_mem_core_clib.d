@@ -1,0 +1,13 @@
+f407_freertos\lv_mem_core_clib.o: ..\Lvgl\src\stdlib\clib\lv_mem_core_clib.c
+f407_freertos\lv_mem_core_clib.o: ..\Lvgl\src\stdlib\clib\../lv_mem.h
+f407_freertos\lv_mem_core_clib.o: ..\Lvgl\src\stdlib\clib\../../lv_conf_internal.h
+f407_freertos\lv_mem_core_clib.o: ..\Lvgl\src\stdlib\clib\../../lv_conf_kconfig.h
+f407_freertos\lv_mem_core_clib.o: ../Lvgl/examples/porting/../../lv_conf.h
+f407_freertos\lv_mem_core_clib.o: ..\Lvgl\src\stdlib\clib\../lv_string.h
+f407_freertos\lv_mem_core_clib.o: ..\Lvgl\src\stdlib\clib\../../misc/lv_types.h
+f407_freertos\lv_mem_core_clib.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdint.h
+f407_freertos\lv_mem_core_clib.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stddef.h
+f407_freertos\lv_mem_core_clib.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdbool.h
+f407_freertos\lv_mem_core_clib.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\inttypes.h
+f407_freertos\lv_mem_core_clib.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\limits.h
+f407_freertos\lv_mem_core_clib.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdarg.h

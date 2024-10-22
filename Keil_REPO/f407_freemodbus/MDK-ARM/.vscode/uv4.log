@@ -1,0 +1,3 @@
+Load "f407_freemodbus\\f407_freemodbus.axf" 
+Erase Failed!Error: Flash Download failed  -  "Cortex-M4"
+Flash Load finished at 10:32:40

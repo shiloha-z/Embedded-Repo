@@ -1,0 +1,15 @@
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\qrcodegen.c
+f103rct6_lvgl\qrcodegen.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\limits.h
+f103rct6_lvgl\qrcodegen.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdlib.h
+f103rct6_lvgl\qrcodegen.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\string.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\qrcodegen.h
+f103rct6_lvgl\qrcodegen.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdbool.h
+f103rct6_lvgl\qrcodegen.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stddef.h
+f103rct6_lvgl\qrcodegen.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdint.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/lv_assert.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/../lv_conf_internal.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/../lv_conf_kconfig.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/../../../lv_conf.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/lv_log.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/lv_types.h
+f103rct6_lvgl\qrcodegen.o: ..\LVGL\src\extra\libs\qrcode\../../../misc/lv_mem.h

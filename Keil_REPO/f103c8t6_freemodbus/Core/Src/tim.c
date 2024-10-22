@@ -62,8 +62,8 @@ void MX_TIM4_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM4_Init 2 */
-	__HAL_TIM_CLEAR_FLAG(&htim4, TIM_FLAG_UPDATE);              // ?????????????,?????????????
-  __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_UPDATE);					// ?????????
+	// __HAL_TIM_CLEAR_FLAG(&htim4, TIM_FLAG_UPDATE);              // ?????????????,?????????????
+  // __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_UPDATE);					// ?????????
   /* USER CODE END TIM4_Init 2 */
 
 }
@@ -80,7 +80,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
     __HAL_RCC_TIM4_CLK_ENABLE();
 
     /* TIM4 interrupt Init */
-    HAL_NVIC_SetPriority(TIM4_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM4_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(TIM4_IRQn);
   /* USER CODE BEGIN TIM4_MspInit 1 */
 

@@ -21,7 +21,6 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "stm32f1xx_hal.h"  // ??? STM32F1 ??
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -92,12 +91,8 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  eMBInit(MB_RTU, 0x01, 0x01, 115200, MB_PAR_ODD);		// ???modbus?RTU??,???9600,???
+  eMBInit(MB_RTU, 0x01, 0x00, 9600, MB_PAR_ODD);		// ???modbus?RTU??,???9600,???
   eMBEnable();	
-  for(int i=0;i<10000;i++);
-
-  //HAL_UART_Transmit(&huart1, (uint8_t*)"Hello, world!\r\n", 14, 1000);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,8 +100,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-eMBPoll();
+
     /* USER CODE BEGIN 3 */
+			eMBPoll();
   }
   /* USER CODE END 3 */
 }

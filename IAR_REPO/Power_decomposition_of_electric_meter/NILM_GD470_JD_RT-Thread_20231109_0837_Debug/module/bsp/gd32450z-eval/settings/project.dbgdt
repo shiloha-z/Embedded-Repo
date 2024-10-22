@@ -47,7 +47,7 @@
           
           
           
-        <item>mean_watch</item><item>std_watch</item><item>powerdata_norm_watch</item><item>powerdata_pad_watch</item><item>covolution_out_watch</item><item>GRU_watch</item><item>fc_outputdata_1_watch</item><item>fc_inputdata_2_watch</item><item>no_norm_result_watch</item><item>LoadResolve_Result_watch</item><item>app_struct</item><item>input_tmp</item><item>activepower</item><item>input_tmp2</item><item>input_hufeng</item><item>power_difference</item><item>V_data</item><item>I_data</item><item>P_active_values</item><item></item></expressions>
+        <item>mean_watch</item><item>std_watch</item><item>powerdata_norm_watch</item><item>powerdata_pad_watch</item><item>covolution_out_watch</item><item>GRU_watch</item><item>fc_outputdata_1_watch</item><item>fc_inputdata_2_watch</item><item>no_norm_result_watch</item><item>LoadResolve_Result_watch</item><item>app_struct</item><item>input_tmp</item><item>activepower</item><item>input_tmp2</item><item>input_hufeng</item><item>power_difference</item><item>V_data</item><item>I_data</item><item>P_active_values</item><item/></expressions>
         <col-names>
           
           

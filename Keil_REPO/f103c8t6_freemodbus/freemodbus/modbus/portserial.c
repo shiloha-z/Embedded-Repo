@@ -65,40 +65,35 @@ void vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
  
 BOOL xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity eParity )
 {
-    // huart1.Instance = USART1;
-    // huart1.Init.BaudRate = ulBaudRate;
-    // huart1.Init.StopBits = UART_STOPBITS_1;
-    // huart1.Init.Mode = UART_MODE_TX_RX;
-    // huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-    // huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+    huart1.Instance = USART1;
+    huart1.Init.BaudRate = ulBaudRate;
+    huart1.Init.StopBits = UART_STOPBITS_1;
+    huart1.Init.Mode = UART_MODE_TX_RX;
+    huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    huart1.Init.OverSampling = UART_OVERSAMPLING_16;
  
-    // switch(eParity)
-    // {
-    // // ???
-    // case MB_PAR_ODD:
-    //     huart1.Init.Parity = UART_PARITY_ODD;
-    //     huart1.Init.WordLength = UART_WORDLENGTH_9B;			// ?????????9bits
-    //     break;
+    switch(eParity)
+    {
+    // 奇校验
+    case MB_PAR_ODD:
+        huart1.Init.Parity = UART_PARITY_ODD;
+        huart1.Init.WordLength = UART_WORDLENGTH_9B;			// 带奇偶校验数据位为9bits
+        break;
  
-    // // ???
-    // case MB_PAR_EVEN:
-    //     huart1.Init.Parity = UART_PARITY_EVEN;
-    //     huart1.Init.WordLength = UART_WORDLENGTH_9B;			// ?????????9bits
-    //     break;
+    // 偶校验
+    case MB_PAR_EVEN:
+        huart1.Init.Parity = UART_PARITY_EVEN;
+        huart1.Init.WordLength = UART_WORDLENGTH_9B;			// 带奇偶校验数据位为9bits
+        break;
  
-    // // ???
-    // default:
-    //     huart1.Init.Parity = UART_PARITY_NONE;
-    //     huart1.Init.WordLength = UART_WORDLENGTH_8B;			// ?????????8bits
-    //     break;
-    // }
-    // return HAL_UART_Init(&huart1) == HAL_OK ? TRUE : FALSE;
-
-
-    __HAL_UART_ENABLE_IT(&huart1,UART_IT_RXNE);
-    __HAL_UART_ENABLE(&huart1);
-
-    return TRUE;
+    // 无校验
+    default:
+        huart1.Init.Parity = UART_PARITY_NONE;
+        huart1.Init.WordLength = UART_WORDLENGTH_8B;			// 无奇偶校验数据位为8bits
+        break;
+    }
+		
+    return HAL_UART_Init(&huart1) == HAL_OK ? TRUE : FALSE;
 }
  
 
@@ -110,27 +105,14 @@ void vMBPortClose( void )
 
 BOOL xMBPortSerialPutByte( CHAR ucByte )
 {
-    /* Put a byte in the UARTs transmit buffer. This function is called
-     * by the protocol stack if pxMBFrameCBTransmitterEmpty( ) has been
-     * called. */
-	if(HAL_UART_Transmit(&huart1,(uint8_t *)&ucByte,1,0x01) != HAL_OK){
-			return FALSE;
-	}
-	else {
-		return TRUE;
-	}
+    USART1->DR = ucByte;
+    return TRUE;
 }
-
+ 
 BOOL xMBPortSerialGetByte( CHAR * pucByte )
 {
-    /* Return the byte in the UARTs receive buffer. This function is called
-     * by the protocol stack after pxMBFrameCBByteReceived( ) has been called.
-     */
-	if(HAL_UART_Receive (&huart1 ,(uint8_t *)pucByte,1,0x01) != HAL_OK )//添加接收一位代码
-		return FALSE ;
-	else {
-		return TRUE;
-	}
+    *pucByte = (USART1->DR & (uint16_t)0x00FF);
+    return TRUE;
 }
  
 /* Create an interrupt handler for the transmit buffer empty interrupt
@@ -155,26 +137,29 @@ void prvvUARTRxISR( void )
     pxMBFrameCBByteReceived(  );
 }
  
-/**
-* @brief This function handles USART1 global interrupt.
-*/
+
+
 void USART1_IRQHandler(void)
 {
-  /* USER CODE BEGIN USART1_IRQn 0 */
-#if UARTISR_EN == 1
- if (__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_RXNE) != RESET)
- {
-  prvvUARTRxISR();    
- }
- if(__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TC) != RESET)
- {
-  prvvUARTTxReadyISR();  
- }
-#else 
-  /* USER CODE END USART1_IRQn 0 */
-  HAL_UART_IRQHandler(&huart1);
-  /* USER CODE BEGIN USART1_IRQn 1 */
-#endif
-  /* USER CODE END USART1_IRQn 1 */
+    // 处理接收中断
+    if(__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_RXNE))
+    {
+        // 调用Modbus接收中断服务程序
+        prvvUARTRxISR();  
+
+        // 清除RXNE标志
+        __HAL_UART_CLEAR_FLAG(&huart1, UART_FLAG_RXNE);
+    }
+
+    // 处理发送中断
+    if(__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TXE))
+    {
+        // 调用Modbus发送准备好中断服务程序
+        prvvUARTTxReadyISR();
+
+        // 清除TXE标志
+        __HAL_UART_CLEAR_FLAG(&huart1, UART_FLAG_TXE);
+    }
 }
+
 

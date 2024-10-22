@@ -3,16 +3,16 @@
         {
             "name": "f407_freemodbus",
             "includePath": [
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Core\\Inc",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Drivers\\CMSIS\\Include",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\freemodbus\\modbus",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Core\\Inc",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Drivers\\CMSIS\\Include",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\freemodbus\\modbus",
                 "D:\\App_Bins\\Keil_v5\\ARM\\ARMCC\\include",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\MDK-ARM",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Core\\Src",
-                "d:\\Repo\\Embedded-Repo\\IAR_REPO\\f407_freemodbus\\Drivers\\STM32F4xx_HAL_Driver\\Src"
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\MDK-ARM",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Core\\Src",
+                "d:\\Repo\\Embedded-Repo\\Keil_REPO\\f407_freemodbus\\Drivers\\STM32F4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

@@ -5,136 +5,64 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\port\portserial.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\port\portother.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\demo.o</file>
-            <file>$PROJ_DIR$\port\portother.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbutils.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\board\exceptions.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncother.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\port\porttimer.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbrtu.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\board\board_lowlevel.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\port\portserial.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\board\board_cstartup_iar.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\drivers\pio.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncholding.o</file>
-            <file>$PROJ_DIR$\demo.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\board\board_memories.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\drivers\wdt.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mb.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbcrc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfunccoils.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\drivers\pmc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncdisc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncinput.o</file>
-            <file>$PROJ_DIR$\..\..\modbus\functions\mbutils.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\port\portevent.o</file>
-            <file>$PROJ_DIR$\Debug\Exe\demo.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\drivers\tc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\drivers\usart.o</file>
-            <file>$PROJ_DIR$\port\portevent.c</file>
-            <file>$PROJ_DIR$\port\porttimer.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbascii.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncdiag.o</file>
-            <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncdiag.c</file>
-            <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncdisc.c</file>
-            <file>$PROJ_DIR$\..\..\modbus\rtu\mbcrc.c</file>
             <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncholding.c</file>
             <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncinput.c</file>
-            <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncother.c</file>
-            <file>$PROJ_DIR$\..\..\modbus\ascii\mbascii.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncdisc.c</file>
             <file>$PROJ_DIR$\..\..\modbus\functions\mbfunccoils.c</file>
-            <file>$PROJ_DIR$\..\..\modbus\mb.c</file>
-            <file>$PROJ_DIR$\libraries\drivers\wdt\wdt.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\rtu\mbcrc.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\ascii\mbascii.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncdiag.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\functions\mbutils.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\functions\mbfuncother.c</file>
             <file>$PROJ_DIR$\..\..\modbus\rtu\mbrtu.c</file>
-            <file>$PROJ_DIR$\libraries\drivers\pio\pio.c</file>
-            <file>$PROJ_DIR$\board\board_cstartup_iar.c</file>
-            <file>$PROJ_DIR$\board\board_lowlevel.c</file>
             <file>$PROJ_DIR$\board\board_memories.c</file>
             <file>$PROJ_DIR$\board\exceptions.c</file>
+            <file>$PROJ_DIR$\libraries\drivers\pio\pio.c</file>
+            <file>$PROJ_DIR$\libraries\drivers\usart\usart.c</file>
+            <file>$PROJ_DIR$\board\board_cstartup_iar.c</file>
+            <file>$PROJ_DIR$\board\board_lowlevel.c</file>
             <file>$PROJ_DIR$\libraries\drivers\pmc\pmc.c</file>
             <file>$PROJ_DIR$\libraries\drivers\tc\tc.c</file>
-            <file>$PROJ_DIR$\libraries\drivers\usart\usart.c</file>
+            <file>$PROJ_DIR$\libraries\drivers\wdt\wdt.c</file>
+            <file>$PROJ_DIR$\..\..\modbus\mb.c</file>
+            <file>$PROJ_DIR$\port\portevent.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\board\board_cstartup_iar.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\drivers\pmc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\drivers\wdt.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncdiag.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncholding.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfunccoils.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mb.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\board\exceptions.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncdisc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\port\portevent.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\port\portserial.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\demo.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\port\porttimer.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\demo.out</file>
+            <file>$PROJ_DIR$\port\portserial.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\drivers\pio.o</file>
+            <file>$PROJ_DIR$\port\portother.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncother.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbrtu.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbcrc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbfuncinput.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\board\board_lowlevel.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\drivers\usart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\board\board_memories.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbutils.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\port\portother.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\drivers\tc.o</file>
+            <file>$PROJ_DIR$\port\porttimer.c</file>
+            <file>$PROJ_DIR$\demo.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\modbus\mbascii.o</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\port\portserial.c</name>
+            <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
-                    <name>ICCARM</name>
-                    <file> 10</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\port\portother.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 1</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\demo.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modbus\functions\mbutils.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\port\portevent.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 24</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\port\porttimer.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modbus\functions\mbfuncdiag.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 31</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modbus\functions\mbfuncdisc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 21</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modbus\rtu\mbcrc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 18</file>
+                    <name>ILINK</name>
+                    <file> 34</file>
                 </tool>
             </outputs>
         </file>
@@ -143,7 +71,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 13</file>
+                    <file> 25</file>
                 </tool>
             </outputs>
         </file>
@@ -152,25 +80,16 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 22</file>
+                    <file> 41</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\modbus\functions\mbfuncother.c</name>
+            <name>$PROJ_DIR$\..\..\modbus\functions\mbfuncdisc.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 6</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modbus\ascii\mbascii.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 30</file>
+                    <file> 29</file>
                 </tool>
             </outputs>
         </file>
@@ -179,34 +98,52 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 19</file>
+                    <file> 26</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\modbus\mb.c</name>
+            <name>$PROJ_DIR$\..\..\modbus\rtu\mbcrc.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 17</file>
+                    <file> 40</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 25</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\libraries\drivers\wdt\wdt.c</name>
+            <name>$PROJ_DIR$\..\..\modbus\ascii\mbascii.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 16</file>
+                    <file> 50</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modbus\functions\mbfuncdiag.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modbus\functions\mbutils.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modbus\functions\mbfuncother.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
                 </tool>
             </outputs>
         </file>
@@ -215,34 +152,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 8</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\libraries\drivers\pio\pio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\board\board_cstartup_iar.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 11</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\board\board_lowlevel.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 9</file>
+                    <file> 39</file>
                 </tool>
             </outputs>
         </file>
@@ -251,7 +161,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 15</file>
+                    <file> 44</file>
                 </tool>
             </outputs>
         </file>
@@ -260,25 +170,16 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 5</file>
+                    <file> 28</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\libraries\drivers\pmc\pmc.c</name>
+            <name>$PROJ_DIR$\libraries\drivers\pio\pio.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 20</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\libraries\drivers\tc\tc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 26</file>
+                    <file> 36</file>
                 </tool>
             </outputs>
         </file>
@@ -287,7 +188,106 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\board_cstartup_iar.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\board_lowlevel.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\libraries\drivers\pmc\pmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 22</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\libraries\drivers\tc\tc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\libraries\drivers\wdt\wdt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modbus\mb.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
                     <file> 27</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\port\portevent.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\port\portserial.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\port\portother.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\port\porttimer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\demo.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
                 </tool>
             </outputs>
         </file>

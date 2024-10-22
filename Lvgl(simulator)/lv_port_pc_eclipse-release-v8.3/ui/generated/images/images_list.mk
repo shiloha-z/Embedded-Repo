@@ -1,0 +1,1 @@
+GEN_CSRCS += _southeast_alpha_30x30.c _202877067073ed45d861b6728c3dcf9b_alpha_17x28.c

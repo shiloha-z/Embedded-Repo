@@ -1,0 +1,16 @@
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\gifdec.c
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\gifdec.h
+f103rct6_lvgl\gifdec.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdint.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_fs.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/../lv_conf_internal.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/../lv_conf_kconfig.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/../../../lv_conf.h
+f103rct6_lvgl\gifdec.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stdbool.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_log.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_types.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_mem.h
+f103rct6_lvgl\gifdec.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\stddef.h
+f103rct6_lvgl\gifdec.o: D:\App_Bins\Keil_v5\ARM\ARMcompiler506\Bin\..\include\string.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_color.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_assert.h
+f103rct6_lvgl\gifdec.o: ..\LVGL\src\extra\libs\gif\../../../misc/lv_math.h
